@@ -1,6 +1,6 @@
 
 import './App.css';
-import Menu from './Components/Menu';
+// import Menu from './Components/Menu';
 
 function App() {
 
@@ -8,7 +8,8 @@ function App() {
   return (
     <>
     <div className='container'>
-      <Menu />
+      {/* <Menu /> */}
+      <h1>Salom</h1>
     </div>
     </>
   );
