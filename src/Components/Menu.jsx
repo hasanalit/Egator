@@ -1,6 +1,6 @@
 import React from 'react'
-// import logo from '../Images/logo.png'
-// import close from '../Images/close.svg'
+import logo from '../Images/logo.png'
+import close from '../Images/close.svg'
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
