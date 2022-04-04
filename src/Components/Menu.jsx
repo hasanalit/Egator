@@ -39,7 +39,7 @@ function Menu() {
               <span className='material-icon-sharp'><DashboardIcon /></span>
               <h3>Dashboard</h3>
             </a>
-            <a href="/">
+            <a href="/" className='active'>
               <span className='material-icon-sharp'><PersonOutlineIcon /></span>
               <h3>Customers</h3>
             </a>
@@ -54,7 +54,7 @@ function Menu() {
             <a href="/">
               <span className='material-icon-sharp'><MailOutlineIcon/></span>
               <h3>Massages</h3>
-              <span className='massage-count'>26</span>
+              <span className='message-count'>26</span>
             </a>
             <a href="/">
               <span className='material-icon-sharp'><ReceiptIcon /></span>
@@ -141,11 +141,46 @@ aside .sidebar a {
 
 aside .sidebar a span {
   font-size: 1.6rem;
+  transition: all 300ms ease;
 }
 
 aside .sidebar a:last-child {
   position: absolute;
   bottom: 2rem;
   width: 100%;
+}
+
+aside .sidebar a.active {
+  background: var(--color-light);
+  color: var(--color-primary);
+  margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+  color: var(--color-primary);
+  margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+  color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+  margin-left: 1rem;
+}
+
+aside .sidebar .message-count {
+  background: var(--color-danger);
+  color: var(--color-white);
+  padding: 2px 10px;
+  font-size: 11px;
+  border-radius: var(--border-radius-1);
 }
 `
