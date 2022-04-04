@@ -1,6 +1,7 @@
 
 import './App.css';
 import Menu from './Components/Menu';
+import Center from './Components/Center';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
     <div className='container'>
       <Menu />
+      <Center />
     </div>
     </>
   );
