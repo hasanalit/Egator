@@ -33,44 +33,44 @@ function Menu() {
             </span>
           </div>
           <div className='sidebar'>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><DashboardIcon /></span>
               <h3>Dashboard</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><PersonOutlineIcon /></span>
               <h3>Customers</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><ReceiptLongIcon /></span>
               <h3>Orders</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><InsightsIcon /></span>
               <h3>Anolytics</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><MailOutlineIcon/></span>
               <h3>Massages</h3>
               <span className='massage-count'>26</span>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><ReceiptIcon /></span>
               <h3>Products</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><ReportGmailerrorredIcon /></span>
               <h3>Reports</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><SettingsIcon /></span>
               <h3>Settings</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><AddIcon /></span>
               <h3>Add Products</h3>
             </a>
-            <a href="#">
+            <a href="/">
               <span className='material-icon-sharp'><LogoutIcon /></span>
               <h3>Logout</h3>
             </a>
