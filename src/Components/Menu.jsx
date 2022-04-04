@@ -1,6 +1,7 @@
 import React from 'react'
-import logo from '../Images/logo.png'
-import close from '../Images/close.svg'
+
+import logo from '../Images/egator.png'
+import CloseIcon from '@mui/icons-material/Close';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
@@ -11,6 +12,7 @@ import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AddIcon from '@mui/icons-material/Add';
 import LogoutIcon from '@mui/icons-material/Logout';
+import styled from 'styled-components';
 
 
 
@@ -20,7 +22,7 @@ function Menu() {
 
 
     return (
-      <>
+      <Wrapper>
       <aside>
         <div className='top'>
           <div className='logo'>
@@ -28,10 +30,10 @@ function Menu() {
             <h2>EGA<span className='danger'>TOR</span></h2>
           </div>
           <div className='close' id='close-btn'>
-            <span className='material-icons-sharp'>
-              <img src={close} alt="close-icon" />
-            </span>
+            <span className='material-icons-sharp'><CloseIcon /></span>
           </div>
+          </div>
+
           <div className='sidebar'>
             <a href="/">
               <span className='material-icon-sharp'><DashboardIcon /></span>
@@ -76,10 +78,74 @@ function Menu() {
             </a>
 
           </div>
-        </div>
+
       </aside>
-      </>
+      </Wrapper>
     );
   }
 
   export default Menu;
+
+  const Wrapper = styled.menu`
+  aside {
+    height: 100vh;
+}
+
+aside .top {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+aside .logo {
+  display: flex;
+  gap: 0.8rem;
+}
+
+aside .logo img {
+  width: 2rem;
+  height: 2rem;
+}
+
+aside .close {
+  display: none;
+}
+
+
+// SIDEBAR
+aside .sidebar {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 86vh;
+  position: relative;
+  top: 3rem;
+}
+
+aside h3 {
+  font-weight: 500;
+}
+
+aside .sidebar a {
+  display: flex;
+  color: var(--color-info-dark);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: releative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
+}
+
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+`
