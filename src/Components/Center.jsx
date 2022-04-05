@@ -76,8 +76,57 @@ function Center() {
             </div>
             <small className="text-muted">Last 24 Hours</small>
           </div>
+          {/* END OF INCOME */}
+        </div>
+        {/* END OF INSIGHTS */}
+
+        <div className='recent-orders'>
+          <h2>Recent Orders</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th>Product Number</th>
+                <th>Payment</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>85631</td>
+                <td>Due</td>
+                <td className='warning'>Pending</td>
+                <td className='primary'>Details</td>
+              </tr>
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>85631</td>
+                <td>Due</td>
+                <td className='warning'>Pending</td>
+                <td className='primary'>Details</td>
+              </tr>
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>85631</td>
+                <td>Due</td>
+                <td className='warning'>Pending</td>
+                <td className='primary'>Details</td>
+              </tr>
+              <tr>
+                <td>Foldable Mini Drone</td>
+                <td>85631</td>
+                <td>Due</td>
+                <td className='warning'>Pending</td>
+                <td className='primary'>Details</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="/">Show All</a>
         </div>
       </main>
+
 
       </Wrapper>
     );
@@ -201,5 +250,56 @@ main .insights .progress .number {
 main .insights small {
   margin-top: 1.3rem;
   display: block;
+}
+
+
+
+
+//   RECENT ORDERS
+main .recent-orders {
+  margin-top: 2rem;
+}
+
+main .recent-orders h2 {
+  margin-bottom: 0.8rem;
+}
+
+main .recent-orders table {
+  background: var(--color-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+main .recent-orders table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid var(--color-light);
+  color: var(--color-dark-variant);
+}
+
+main table tbody tr:last-child td{
+  border: none;
+}
+
+main .recent-orders a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary)
+}
+
+main .warning {
+  color: var(--color-warning);
+}
+
+main .primary {
+  color: var(--color-primary);
 }
   `
