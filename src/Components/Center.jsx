@@ -302,4 +302,53 @@ main .warning {
 main .primary {
   color: var(--color-primary);
 }
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  main .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+main .recent-orders {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 8.8rem;
+}
+
+main .recent-orders table {
+    width: 83vw;
+}
+
+main table tbody tr td:last-child, main table tbody tr td:first-child {
+    display: none;
+}
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 8rem;
+    padding: 0 1rem;
+}
+
+main .recent-orders {
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+}
+
+main .recent-orders table{
+    margin: 0;
+    width: 100%;
+}
+}
   `

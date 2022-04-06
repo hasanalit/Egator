@@ -93,7 +93,7 @@ function Menu() {
 }
 
 aside .top {
-  background: white;
+  // background: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
