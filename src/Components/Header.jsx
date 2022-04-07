@@ -9,13 +9,15 @@ import PersonIcon from '@mui/icons-material/Person';
 import AddIcon from '@mui/icons-material/Add';
 import styled from 'styled-components';
 
-function Header() {
+function Header({openModal, setOpenModal}) {
+
+
     return (
         <Wrapper>
         <div className="right">
             <div className="top">
-                <button id="menu-btn">
-                    <span><MenuIcon /></span>
+                <button id="menu-btn" onClick={() => setOpenModal(!openModal)}>
+                    <span className='hamburger'><MenuIcon /></span>
                 </button>
                 <div className='theme-toggler'>
                     <span className='active'><LightModeIcon /></span>

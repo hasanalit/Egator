@@ -18,18 +18,18 @@ import styled from 'styled-components';
 
 
 
-function Menu() {
+function Menu({openModal, setOpenModal}) {
 
 
     return (
       <Wrapper>
-      <aside>
+            {openModal && <aside>
         <div className='top'>
           <div className='logo'>
             <img src={logo} alt="logo" />
             <h2>EGA<span className='danger'>TOR</span></h2>
           </div>
-          <div className='close' id='close-btn'>
+          <div className='close' id='close-btn' onClick={() => setOpenModal(!openModal)}>
             <span className='material-icons-sharp'><CloseIcon /></span>
           </div>
           </div>
@@ -78,7 +78,7 @@ function Menu() {
             </a>
 
           </div>
-      </aside>
+      </aside>}
 
 
       </Wrapper>
@@ -90,6 +90,7 @@ function Menu() {
   const Wrapper = styled.menu`
   aside {
     height: 100vh;
+    display: block;
 }
 
 aside .top {
@@ -111,7 +112,7 @@ aside .logo img {
 }
 
 aside .close {
-  display: none;
+  display: inline;
 }
 
 
