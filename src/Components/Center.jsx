@@ -102,7 +102,7 @@ function Center({appState}) {
                 <td>{data.userFN} {data.userLN}</td>
                 <td>{data.id}</td>
                 <td>{data.userD}</td>
-                <td className='warning'>{String(data.isCome)}</td>
+                <td style={data.isCome ? {color: "blue"} : {color: "red"}}>{String(data.isCome) }</td>
                 </tr>
               ))}
             </tbody>
