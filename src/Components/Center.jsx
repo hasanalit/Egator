@@ -97,12 +97,12 @@ function Center({appState}) {
               </tr>
             </thead>
             <tbody>
-              {appState.map(data => (
+            {appState.map(data => (
                 <tr key={Math.random()}>
                 <td>{data.userFN} {data.userLN}</td>
                 <td>{data.id}</td>
                 <td>{data.userD}</td>
-                <td>{String(data.isCome)}</td>
+                <td className='warning'>{String(data.isCome)}</td>
                 </tr>
               ))}
             </tbody>
@@ -280,7 +280,7 @@ main .recent-orders a {
 }
 
 main .warning {
-  color: var(--color-warning);
+  color: red;
 }
 
 main .primary {
