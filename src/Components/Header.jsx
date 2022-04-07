@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '../Images/more.png';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
@@ -17,7 +17,9 @@ function Header({openModal, setOpenModal}) {
         <div className="right">
             <div className="top">
                 <button id="menu-btn" onClick={() => setOpenModal(!openModal)}>
-                    <span className='hamburger'><MenuIcon /></span>
+                    <span className='hamburger'>
+                        <img className='menu-icons' src={MenuIcon} alt="Menu" />
+                    </span>
                 </button>
                 <div className='theme-toggler'>
                     <span className='active'><LightModeIcon /></span>
@@ -177,6 +179,14 @@ const Wrapper = styled.div`
     display: flex;
     gap: 2rem;
     text-align: right;
+}
+
+.menu-icons {
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 
 

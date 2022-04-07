@@ -112,7 +112,7 @@ aside .logo img {
 }
 
 aside .close {
-  display: inline;
+  display: none;
 }
 
 
@@ -184,5 +184,11 @@ aside .sidebar .message-count {
   padding: 2px 10px;
   font-size: 11px;
   border-radius: var(--border-radius-1);
+}
+
+@media screen and (max-width: 768px) {
+  aside .close {
+    display: inline;
+  }
 }
 `

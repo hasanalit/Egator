@@ -25,13 +25,13 @@ function App() {
   }, [setAppState]);
 
 
-  console.log(appState);
+  // console.log(appState);
 
   return (
     <>
     <div className='container'>
       <Menu openModal={openModal} setOpenModal={setOpenModal}/>
-      <Center />
+      <Center appState={appState}/>
       <Header openModal={openModal} setOpenModal={setOpenModal}/>
     </div>
     </>

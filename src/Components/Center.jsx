@@ -6,12 +6,15 @@ import styled from 'styled-components';
 
 
 
-function Center() {
+function Center({appState}) {
+
+
 
     return (
       <Wrapper>
 
                 {/* END OF ASIDE */}
+
       <main>
         <h1>Dashboard</h1>
 
@@ -80,6 +83,7 @@ function Center() {
         </div>
         {/* END OF INSIGHTS */}
 
+
         <div className='recent-orders'>
           <h2>Recent Orders</h2>
           <table>
@@ -93,34 +97,14 @@ function Center() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td className='warning'>Pending</td>
-                <td className='primary'>Details</td>
-              </tr>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td className='warning'>Pending</td>
-                <td className='primary'>Details</td>
-              </tr>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td className='warning'>Pending</td>
-                <td className='primary'>Details</td>
-              </tr>
-              <tr>
-                <td>Foldable Mini Drone</td>
-                <td>85631</td>
-                <td>Due</td>
-                <td className='warning'>Pending</td>
-                <td className='primary'>Details</td>
-              </tr>
+              {appState.map(data => (
+                <tr key={Math.random()}>
+                <td>{data.userFN} {data.userLN}</td>
+                <td>{data.id}</td>
+                <td>{data.userD}</td>
+                <td>{String(data.isCome)}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
           <a href="/">Show All</a>
