@@ -35,11 +35,11 @@ function Menu({openModal, setOpenModal}) {
           </div>
 
           <div className='sidebar'>
-            <a href="/">
+            <a href="/" className='active'>
               <span className='material-icon-sharp'><DashboardIcon /></span>
               <h3>Dashboard</h3>
             </a>
-            <a href="/" className='active'>
+            <a href="/">
               <span className='material-icon-sharp'><PersonOutlineIcon /></span>
               <h3>Customers</h3>
             </a>

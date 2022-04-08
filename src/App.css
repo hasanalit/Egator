@@ -130,6 +130,19 @@ small {
     color: var(--color-warning);
 }
 
+.root-light {
+    background: #999;
+    color: #f50;
+}
+
+.root-dark {
+    background: #181a1e;
+    color: #fff;
+}
+
+
+
+
 
 @media screen and (max-width: 1200px) {
     .container {

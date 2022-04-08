@@ -19,7 +19,7 @@ function Center({appState}) {
         <h1>Dashboard</h1>
 
         <div className='date'>
-          <input type="date" />
+          <input className='data-num' type="date" />
         </div>
 
         <div className='insights'>
@@ -132,6 +132,14 @@ main .date {
   padding: 0.5rem 1.6rem;
 }
 
+.data-num {
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 main .data input[type='date'] {
   background: transparent;
   color: var(--color-dark);
@@ -158,7 +166,7 @@ main .insights > div:hover {
 
 main .insights > div span {
   background: var(--color-primary);
-  padding: 0 0.5rem;
+  padding: 0 0.6rem;
   border-radius: 50%;
   color: var(--color-white);
   font-size: 2rem;

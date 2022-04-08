@@ -9,6 +9,12 @@ import axios from 'axios';
 
 function App() {
 
+  const [theme, setTheme] = useState(window.localStorage.getItem('theme') || 'light');
+
+
+  if(theme){
+    window.localStorage.setItem('theme', theme)
+  }
 
   const [openModal, setOpenModal] = useState(true)
 
@@ -29,10 +35,10 @@ function App() {
 
   return (
     <>
-    <div className='container'>
+    <div className={`container ${theme}`}>
       <Menu openModal={openModal} setOpenModal={setOpenModal}/>
       <Center appState={appState}/>
-      <Header openModal={openModal} setOpenModal={setOpenModal}/>
+      <Header theme={theme} setTheme={setTheme} openModal={openModal} setOpenModal={setOpenModal}/>
     </div>
     </>
   );

@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuIcon from '../Images/more.png';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+// import LightModeIcon from '@mui/icons-material/LightMode';
+// import DarkModeIcon from '@mui/icons-material/DarkMode';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
@@ -9,7 +9,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import AddIcon from '@mui/icons-material/Add';
 import styled from 'styled-components';
 
-function Header({openModal, setOpenModal}) {
+function Header({openModal, setOpenModal, setTheme, theme}) {
 
 
     return (
@@ -21,10 +21,14 @@ function Header({openModal, setOpenModal}) {
                         <img className='menu-icons' src={MenuIcon} alt="Menu" />
                     </span>
                 </button>
-                <div className='theme-toggler'>
-                    <span className='active'><LightModeIcon /></span>
-                    <span><DarkModeIcon /></span>
-                </div>
+                <select className='theme-toggler' defaultValue={theme} onChange={e => setTheme(e.target.value)}>
+                    <option value="root-light" className='active'>light</option>
+                    <option value="root-dark">dark</option>
+                </select>
+                {/* <div className='theme-toggler' onChange={e => setTheme(e.target.value)}>
+                    <span value='root-light' className='active'><LightModeIcon /></span>
+                    <span value='root-dark'><DarkModeIcon /></span>
+                </div> */}
                 <div className='profile'>
                     <div className='info'>
                         <p>Hey, <b>Daniel</b></p>
@@ -254,7 +258,7 @@ const Wrapper = styled.div`
 }
 
 .right .sales-analytics .item .icon {
-    padding: 0.6rem;
+    padding: 0.5rem 0.6rem;
     color: var(--color-white);
     border-radius: 50%;
     background: var(--color-primary);
