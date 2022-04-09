@@ -2,8 +2,16 @@
 import './App.css';
 import Header from './Components/Header';
 import Menu from './Components/Menu';
-import Center from './Components/Center';
+import Center from './Pages/Center';
+import Xodimlard from './Pages/Xodimlarda';
+import Studentattendence from './Pages/Sautudent-attendnce';
+import PersonList from './Pages/Person-list';
+import StudentList from './Pages/Student-list'
+import Sozlamalar from './Pages/Sozlamalar';
+import PersonAdd from './Pages/Persona-dd';
+import Studentadd from './Pages/Student-add';
 import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 
 
@@ -37,7 +45,16 @@ function App() {
     <>
     <div className={`container ${theme}`}>
       <Menu openModal={openModal} setOpenModal={setOpenModal}/>
-      <Center appState={appState}/>
+      <Routes>
+        <Route path='/' element={<Center appState={appState}/>}/>
+        <Route path='/xodimlard' element={<Xodimlard />}/>
+        <Route path='/studentattendence' element={<Studentattendence />}/>
+        <Route path='/personList' element={<PersonList />}/>
+        <Route path='/studentList' element={<StudentList />}/>
+        <Route path='/sozlamalar' element={<Sozlamalar />}/>
+        <Route path='/personAdd' element={<PersonAdd />}/>
+        <Route path='/studentadd' element={<Studentadd />}/>
+      </Routes>
       <Header theme={theme} setTheme={setTheme} openModal={openModal} setOpenModal={setOpenModal}/>
     </div>
     </>

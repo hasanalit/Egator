@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { NavLink } from 'react-router-dom';
 import logo from '../Images/egator.png'
 import CloseIcon from '@mui/icons-material/Close';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -37,25 +38,35 @@ function Menu({openModal, setOpenModal}) {
           </div>
 
           <div className='sidebar'>
-            <a href="/" className='active'>
+            <a href="/">
+              <NavLink to='/'>
               <span className='material-icon-sharp'><DashboardIcon /></span>
               <h3>Asosiy Sahifa</h3>
+              </NavLink>
             </a>
             <a href="/">
+              <NavLink to='/xodimlard'>
               <span className='material-icon-sharp'><GroupIcon /></span>
               <h3>Xodimlar davomati</h3>
+              </NavLink>
             </a>
             <a href="/">
+              <NavLink to='/studentattendence'>
               <span className='material-icon-sharp'><SchoolIcon /></span>
               <h3>O`quvchilar davomati</h3>
+              </NavLink>
             </a>
             <a href="/">
+              <NavLink to='/personList'>
               <span className='material-icon-sharp'><ReceiptIcon /></span>
               <h3>Xodimlar ro'yxati</h3>
+              </NavLink>
             </a>
             <a href="/">
+              <NavLink to='/studentList'>
               <span className='material-icon-sharp'><ReceiptLongIcon /></span>
               <h3>O'quvchilar ro'yxati</h3>
+              </NavLink>
             </a>
             {/* <a href="/">
               <span className='material-icon-sharp'><MailOutlineIcon/></span>
@@ -63,16 +74,22 @@ function Menu({openModal, setOpenModal}) {
               <span className='message-count'>26</span>
             </a> */}
             <a href="/">
+              <NavLink to='/sozlamalar'>
               <span className='material-icon-sharp'><SettingsIcon /></span>
               <h3>Sozlamalar</h3>
+              </NavLink>
             </a>
             <a href="/">
+              <NavLink to='/personAdd'>
               <span className='material-icon-sharp'><PersonAddAlt1Icon /></span>
               <h3>Xodim qo'shish</h3>
+              </NavLink>
             </a>
             <a href="/">
+              <NavLink to='/studentadd'>
               <span className='material-icon-sharp'><AddIcon /></span>
               <h3>O'quvchi qo'shish</h3>
+              </NavLink>
             </a>
             <a href="/">
               <span className='material-icon-sharp'><LogoutIcon /></span>
@@ -120,6 +137,7 @@ aside .close {
 
 // SIDEBAR
 aside .sidebar {
+  padding-top: 2rem;
   background: white;
   display: flex;
   flex-direction: column;
@@ -135,10 +153,10 @@ aside h3 {
 aside .sidebar a {
   display: flex;
   color: var(--color-info-dark);
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   gap: 1rem;
   align-items: center;
-  position: releative;
+  position: relative;
   height: 3.7rem;
   transition: all 300ms ease;
 }
