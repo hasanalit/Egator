@@ -90,7 +90,7 @@ function Center({appState}) {
             <thead>
               <tr>
                 <th>Product Name</th>
-                <th>Product Number</th>
+                <th className='table-class'>Product Number</th>
                 {/* <th>Payment</th> */}
                 <th>Status</th>
                 <th></th>
@@ -101,7 +101,7 @@ function Center({appState}) {
                 <tr key={Math.random()}>
                 <td>{data.userFN} {data.userLN}</td>
                 {/* <td>{data.id}</td> */}
-                <td>{data.userD}</td>
+                <td className='table-class'>{data.userD}</td>
                 <td style={data.isCome ? {color: "blue"} : {color: "red"}}>{String(data.isCome) }</td>
                 </tr>
               ))}
@@ -318,8 +318,11 @@ main .recent-orders table {
     width: 83vw;
 }
 
-main table tbody tr td:last-child, main table tbody tr td:first-child {
-    display: none;
+// main table tbody tr td:last-child, main table tbody tr td:first-child {
+//     display: none;
+// }
+.table-class {
+  display: none;
 }
 }
 
@@ -342,5 +345,7 @@ main .recent-orders table{
     margin: 0;
     width: 100%;
 }
+
+
 }
   `
