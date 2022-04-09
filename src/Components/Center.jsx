@@ -91,7 +91,7 @@ function Center({appState}) {
               <tr>
                 <th>Product Name</th>
                 <th>Product Number</th>
-                <th>Payment</th>
+                {/* <th>Payment</th> */}
                 <th>Status</th>
                 <th></th>
               </tr>
@@ -100,7 +100,7 @@ function Center({appState}) {
             {appState.map(data => (
                 <tr key={Math.random()}>
                 <td>{data.userFN} {data.userLN}</td>
-                <td>{data.id}</td>
+                {/* <td>{data.id}</td> */}
                 <td>{data.userD}</td>
                 <td style={data.isCome ? {color: "blue"} : {color: "red"}}>{String(data.isCome) }</td>
                 </tr>

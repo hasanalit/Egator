@@ -18,7 +18,6 @@ function Header({openModal, setOpenModal, setTheme, theme}) {
             <div className="top">
                 <button id="menu-btn" onClick={() => setOpenModal(!openModal)}>
                     <span className='hamburger'>
-                    {/* style={data.isCome ? {color: "blue"} : {color: "red"}} */}
                         <img className='menu-icons' src={MenuIcon} alt="Menu" />
                     </span>
                 </button>
@@ -192,6 +191,11 @@ const Wrapper = styled.div`
     border: none;
     outline: none;
     background-color: transparent;
+}
+
+
+#menu-btn {
+    border: none;
 }
 
 
