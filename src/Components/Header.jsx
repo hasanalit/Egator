@@ -1,7 +1,7 @@
 import React from 'react'
 import MenuIcon from '../Images/more.png';
-// import LightModeIcon from '@mui/icons-material/LightMode';
-// import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
@@ -18,17 +18,18 @@ function Header({openModal, setOpenModal, setTheme, theme}) {
             <div className="top">
                 <button id="menu-btn" onClick={() => setOpenModal(!openModal)}>
                     <span className='hamburger'>
+                    {/* style={data.isCome ? {color: "blue"} : {color: "red"}} */}
                         <img className='menu-icons' src={MenuIcon} alt="Menu" />
                     </span>
                 </button>
-                <select className='theme-toggler' defaultValue={theme} onChange={e => setTheme(e.target.value)}>
+                {/* <select className='theme-toggler' defaultValue={theme} onChange={e => setTheme(e.target.value)}>
                     <option value="root-light" className='active'>light</option>
                     <option value="root-dark">dark</option>
-                </select>
-                {/* <div className='theme-toggler' onChange={e => setTheme(e.target.value)}>
+                </select> */}
+                <div className='theme-toggler' onChange={e => setTheme(e.target.value)}>
                     <span value='root-light' className='active'><LightModeIcon /></span>
                     <span value='root-dark'><DarkModeIcon /></span>
-                </div> */}
+                </div>
                 <div className='profile'>
                     <div className='info'>
                         <p>Hey, <b>Daniel</b></p>

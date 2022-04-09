@@ -131,14 +131,15 @@ small {
 }
 
 .root-light {
-    background: #999;
-    color: #f50;
+    background: transparent;
+    /* color: #f50; */
 }
 
 .root-dark {
     background: #181a1e;
     color: #fff;
 }
+
 
 
 
