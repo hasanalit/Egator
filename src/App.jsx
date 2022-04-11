@@ -39,7 +39,7 @@ function App() {
   }, [setAppState]);
 
 
-  // console.log(appState);
+  console.log(appState);
 
   return (
     <>
@@ -48,6 +48,7 @@ function App() {
       <Menu openModal={openModal} setOpenModal={setOpenModal}/>
       <Routes>
         <Route path='/' element={<Center appState={appState} theme={theme} setTheme={setTheme} />}/>
+        <Route path='/studentList/:username' element={<StudentList appState={appState} theme={theme} setTheme={setTheme} />}/>
         <Route path='/xodimlard' element={<Xodimlard />}/>
         <Route path='/studentattendence' element={<Studentattendence />}/>
         <Route path='/personList' element={<PersonList />}/>

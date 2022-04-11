@@ -55,4 +55,10 @@ const Wrapper = styled.div`
     width: 3.4rem;
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    .theme-toggler-display {
+        margin-top: 50px;
+    }
+}
 `

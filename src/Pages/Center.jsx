@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
@@ -7,6 +8,7 @@ import styled from 'styled-components';
 
 
 function Center({appState, theme}) {
+
 
 
 
@@ -99,7 +101,7 @@ function Center({appState, theme}) {
             <tbody>
             {appState.map(data => (
                 <tr key={Math.random()}>
-                <td>{data.userFN} {data.userLN}</td>
+                <td key={data.id}><Link to={`/studentList/${data.userFN}`}>{data.userFN} {data.userLN}</Link></td>
                 {/* <td>{data.id}</td> */}
                 <td className='table-class'>{data.userD}</td>
                 <td style={data.isCome ? {color: "blue"} : {color: "red"}}>{String(data.isCome) }</td>

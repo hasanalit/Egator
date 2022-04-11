@@ -210,5 +210,6 @@ aside .sidebar .message-count {
   aside .close {
     display: inline;
   }
+  
 }
 `
