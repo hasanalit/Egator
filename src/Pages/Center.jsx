@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 
 
-function Center({appState}) {
+function Center({appState, theme}) {
 
 
 

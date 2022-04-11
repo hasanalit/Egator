@@ -44,18 +44,19 @@ function App() {
   return (
     <>
     <div className={`container ${theme}`}>
+
       <Menu openModal={openModal} setOpenModal={setOpenModal}/>
       <Routes>
-        <Route path='/' element={<Center appState={appState}/>}/>
+        <Route path='/' element={<Center appState={appState} theme={theme} setTheme={setTheme} />}/>
         <Route path='/xodimlard' element={<Xodimlard />}/>
         <Route path='/studentattendence' element={<Studentattendence />}/>
         <Route path='/personList' element={<PersonList />}/>
         <Route path='/studentList' element={<StudentList />}/>
-        <Route path='/sozlamalar' element={<Sozlamalar />}/>
+        <Route path='/sozlamalar' element={<Sozlamalar theme={theme} setTheme={setTheme} />}/>
         <Route path='/personAdd' element={<PersonAdd />}/>
         <Route path='/studentadd' element={<Studentadd />}/>
       </Routes>
-      <Header theme={theme} setTheme={setTheme} openModal={openModal} setOpenModal={setOpenModal}/>
+      <Header openModal={openModal} setOpenModal={setOpenModal}/>
     </div>
     </>
   );

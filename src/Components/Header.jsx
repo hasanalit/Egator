@@ -1,7 +1,5 @@
 import React from 'react'
 import MenuIcon from '../Images/more.png';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocalMallIcon from '@mui/icons-material/LocalMall';
@@ -9,7 +7,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import AddIcon from '@mui/icons-material/Add';
 import styled from 'styled-components';
 
-function Header({openModal, setOpenModal, setTheme, theme}) {
+function Header({openModal, setOpenModal }) {
 
 
     return (
@@ -21,14 +19,10 @@ function Header({openModal, setOpenModal, setTheme, theme}) {
                         <img className='menu-icons' src={MenuIcon} alt="Menu" />
                     </span>
                 </button>
-                {/* <select className='theme-toggler' defaultValue={theme} onChange={e => setTheme(e.target.value)}>
-                    <option value="root-light" className='active'>light</option>
-                    <option value="root-dark">dark</option>
-                </select> */}
-                <div className='theme-toggler' onChange={e => setTheme(e.target.value)}>
+                {/* <div className='theme-toggler' onChange={e => setTheme(e.target.value)}>
                     <span value='root-light' className='active'><LightModeIcon /></span>
                     <span value='root-dark'><DarkModeIcon /></span>
-                </div>
+                </div> */}
                 <div className='profile'>
                     <div className='info'>
                         <p>Hey, <b>Daniel</b></p>
@@ -151,32 +145,6 @@ const Wrapper = styled.div`
 
 .right .top button {
     display: none;
-}
-
-.right .theme-toggler {
-    background: var(--color-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.6rem;
-    width: 4.2rem;
-    cursor: pointer;
-    border-radius: var(--border-radius-1);
-}
-
-.right .theme-toggler span {
-    font-size: 1.2rem;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right .theme-toggler span.active {
-    background: var(--color-primary);
-    color: white;
-    border-radius: var(--border-radius-1);
 }
 
 .right .top .profile {
@@ -316,11 +284,6 @@ const Wrapper = styled.div`
         margin: 0;
         z-index: 2;
         box-shadow: 0 1rem 1rem var(--color-light);
-    }
-    .right .top .theme-toggler {
-        width: 4.4rem;
-        position: absolute;
-        left: 66%;
     }
 
     .right .profile .info {
